@@ -1,13 +1,13 @@
 services:
   service_a:
-    image: ghcr.io/Tremainm/lab6_service_a/service_a:latest
+    image: ghcr.io/tremainm/lab6_service_a/service_a:latest
     ports:
       - "8001:8000"
     networks:
       - labnet
 
   service_b:
-    image: ghcr.io/Tremainm/lab6_service_b/service_b:latest
+    image: ghcr.io/tremainm/lab6_service_b/service_b:latest
     env_file: ./.env
     depends_on:
       - service_a
